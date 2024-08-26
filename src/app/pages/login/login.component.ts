@@ -28,7 +28,20 @@ export class LoginComponent {
         localStorage.setItem("angular18Login", this.loginObj.User)
         this.router.navigateByUrl("dashboard")
       } else {
-        alert("Invalid Email or Password");
+        const passwordBtn = document.getElementById('password-btn');
+        if (passwordBtn) {
+          passwordBtn.style.borderColor = "red";
+          passwordBtn.addEventListener('focus', () => {
+            passwordBtn.style.borderColor = "rgb(255, 255, 255)";
+          });
+        }
+        const emailBtn = document.getElementById('email-btn');
+        if (emailBtn) {
+          emailBtn.style.borderColor = "red";
+          emailBtn.addEventListener('focus', () => {
+            emailBtn.style.borderColor = "rgb(255, 255, 255)";
+          });
+        }
       }
     })
   }

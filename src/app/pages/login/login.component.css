@@ -48,6 +48,12 @@
   border-radius: 40px;
 }
 
+.input-box input:focus {
+  border: 2px solid;
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
 .input-box input::placeholder {
   color: #ffffff99;
 }
