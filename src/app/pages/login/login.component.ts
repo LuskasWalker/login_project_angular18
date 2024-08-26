@@ -25,6 +25,7 @@ export class LoginComponent {
   onLogin() {
     this.http.post("https://freeapi.miniprojectideas.com/api/User/Login", this.loginObj).subscribe((res:any) => {
       if (res.result) {
+        localStorage.setItem("angular18Login", this.loginObj.User)
         this.router.navigateByUrl("dashboard")
       } else {
         alert("Invalid Email or Password");
